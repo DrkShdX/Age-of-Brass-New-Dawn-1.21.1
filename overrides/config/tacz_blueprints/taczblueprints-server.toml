@@ -1,0 +1,137 @@
+#TaCZ: Blueprints Reforged config.
+#Settings here control how guns and attachments are locked, how blueprint fragments
+#are found, and how likely each thing is to be unlocked.
+[general]
+	#
+	#Do guns need a blueprint before they can be crafted?
+	#true  = guns stay locked until you research them (normal mode).
+	#false = guns can be crafted right away, no blueprint needed.
+	requireGunBlueprints = true
+	#
+	#Do attachments need a blueprint before they can be crafted?
+	#true  = attachments stay locked until you research them (normal mode).
+	#false = attachments can be crafted right away, no blueprint needed.
+	requireAttachmentBlueprints = true
+
+#
+#How blueprint fragments are found in chests.
+[fragments]
+	#
+	#Chance for a chest to contain blueprint fragments.
+	#1.0 = every chest, 0.25 = one in four chests, 0.0 = never.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	chestChance = 0.25
+	#
+	#Fewest fragments a chest can give.
+	# Default: 1
+	# Range: 1 ~ 64
+	minFragmentsPerChest = 1
+	#
+	#Most fragments a chest can give.
+	# Default: 3
+	# Range: 1 ~ 64
+	maxFragmentsPerChest = 3
+	#
+	#Set above 0 to always give exactly this many fragments, ignoring the min/max above.
+	#Leave at 0 to use the min/max range.
+	# Default: 0
+	# Range: 0 ~ 64
+	exactFragmentsPerChest = 0
+	#
+	#Give specific chests their own chance and fragment amounts.
+	#Format per line: "loot_table=chance,min,max"
+	#Example: "minecraft:chests/jungle_temple=1.0,4,6"
+	#  -> jungle temples always (1.0) give 4 to 6 fragments.
+	perChestOverrides = []
+
+#
+#What a blueprint unlocks when you use it, and how often it picks a gun vs an attachment.
+[unlocks]
+	#
+	#Can blueprints unlock guns?
+	blueprintsCanUnlockGuns = true
+	#
+	#Can blueprints unlock attachments?
+	blueprintsCanUnlockAttachments = true
+	#
+	#Gun vs attachment chance. These two numbers are weighed against each other.
+	#Default 60 gun / 25 attachment is about 70% guns, 30% attachments.
+	#This number is the gun side. Higher = more guns.
+	# Default: 60
+	# Range: 0 ~ 1000
+	gunChance = 60
+	#
+	#The attachment side of the chance above. Higher = more attachments.
+	# Default: 25
+	# Range: 0 ~ 1000
+	attachmentChance = 25
+
+#
+#How likely each kind of GUN is to be unlocked. Higher = unlocked more often.
+#Set any to 0 to never unlock that kind from blueprints.
+[gunWeights]
+	# Default: 100
+	# Range: 0 ~ 1000
+	pistol = 100
+	# Default: 80
+	# Range: 0 ~ 1000
+	smg = 80
+	# Default: 70
+	# Range: 0 ~ 1000
+	rifle = 70
+	# Default: 60
+	# Range: 0 ~ 1000
+	shotgun = 60
+	# Default: 25
+	# Range: 0 ~ 1000
+	sniper = 25
+	# Default: 30
+	# Range: 0 ~ 1000
+	machineGun = 30
+	# Default: 10
+	# Range: 0 ~ 1000
+	rpg = 10
+	#Used for any gun whose type isn't listed above.
+	# Default: 50
+	# Range: 0 ~ 1000
+	other = 50
+
+#
+#How likely each ATTACHMENT rarity is to be unlocked, based on the color of the
+#attachment's name in your gun pack (white, green, blue, purple, yellow).
+#Higher = unlocked more often. Set any to 0 to never unlock that rarity.
+[attachmentWeights]
+	#White attachments.
+	# Default: 100
+	# Range: 0 ~ 1000
+	common = 100
+	#Green attachments.
+	# Default: 70
+	# Range: 0 ~ 1000
+	uncommon = 70
+	#Blue attachments.
+	# Default: 40
+	# Range: 0 ~ 1000
+	rare = 40
+	#Purple attachments.
+	# Default: 20
+	# Range: 0 ~ 1000
+	epic = 20
+	#Yellow/gold attachments.
+	# Default: 8
+	# Range: 0 ~ 1000
+	legendary = 8
+
+#
+#Things that are already unlocked for everyone from the start, no blueprint needed.
+#Use full TaCZ ids, one per line inside the brackets.
+#A full list of every gun and attachment id from your pack is written to
+#config/tacz_blueprints/taczblueprints-ids.txt each time the world loads - just copy ids from there.
+[startingUnlocks]
+	#
+	#Example: ["tacz:gun/ak47", "tacz:gun/m4a1"]
+	alreadyUnlockedGuns = []
+	#
+	#Example: ["tacz:attachment/scope_4x"]
+	alreadyUnlockedAttachments = []

@@ -1,0 +1,8 @@
+{
+  "droplets": "ON",
+  "stainDistance": "NEAR",
+  "bodyBlood": true,
+  "itemBlood": true,
+  "waterClouds": "ON",
+  "flowing": true
+}

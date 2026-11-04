@@ -1,0 +1,15 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"mekanism:scuba_mask"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:scuba_tank"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:jetpack","components":"{\"mekanism:chemicals\":{chemical_tanks:[{amount:24000L,id:\"mekanism:hydrogen\"}]}}"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:jetpack_armored"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:mekasuit_pants"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:mekasuit_boots"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:alloy_infused"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:steel_casing"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"mekanism:basic_control_circuit"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chromeware:chrome_compressor"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chromeware:titanium_bones"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tacz:modern_kinetic_gun","components":"{\"minecraft:custom_data\":{GunCurrentAmmoCount:5,GunFireMode:\"SEMI\",GunId:\"tacz:m95\",HasBulletInBarrel:1b}}"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]
